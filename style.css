@@ -1,7 +1,8 @@
 /* Imports - Tipografía */
 @font-face {
   font-family: "PP Formula";
-  src: url("https: //res.cloudinary.com/ibrocado/raw/upload/v1651002325/fonts/PPFormula-CondensedExtralight_pecmpc.woff"), format("woff");
+  /* src: url("https: //res.cloudinary.com/ibrocado/raw/upload/v1651002325/fonts/PPFormula-CondensedExtralight_pecmpc.woff"), format("woff"); */
+  src: url("https://res.cloudinary.com/pmichventura/raw/upload/v1651850121/CENTRO/PPFormulaCondensed-Light_pllyfl.woff2"), format("woff");
 }
 
 /* Reset */
