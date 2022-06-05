@@ -1,0 +1,215 @@
+/* Imports - Tipografía */
+@font-face {
+  font-family: "PP Formula";
+  /* src: url("https: //res.cloudinary.com/ibrocado/raw/upload/v1651002325/fonts/PPFormula-CondensedExtralight_pecmpc.woff"), format("woff"); */
+  src: url("https://res.cloudinary.com/pmichventura/raw/upload/v1651850121/CENTRO/PPFormulaCondensed-Light_pllyfl.woff2"),
+    format("woff");
+}
+
+/* Reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+ul {
+  margin: 0;
+  padding-inline: 0;
+}
+
+li {
+  list-style: none;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behaviour: auto !important;
+  }
+}
+
+/* Variables */
+:root {
+  /* 1. Colores */
+  --black: #000000;
+  --white: #ffffff;
+  /* 2. Tipografía */
+  --font-sans: "PP Formula", sans-serif;
+  --font-size-1: 1rem;
+  --font-size-2: 1.1rem;
+  --font-size-3: 1.25rem;
+  --font-size-4: 1.5rem;
+  --font-size-5: 2rem;
+  --font-size-6: 2.5rem;
+  --font-size-fluid-1: clamp(1rem, 4vw, 1.5rem);
+  --font-size-fluid-2: clamp(1.5rem, 6vw, 2.5rem);
+  --font-size-fluid-3: clamp(2rem, 9vw, 3.5rem);
+  /* 3. Layouts */
+  --size-mobile: 414px;
+  --size-desktop: 1440px;
+}
+
+/* Base */
+body {
+  font-family: var(--font-sans);
+  background-color: var(--white);
+  color: var(--black);
+}
+
+/* Home */
+.home {
+  position: relative;
+  height: 100vh;
+}
+
+.home-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 20px;
+  padding-inline: 20px;
+  height: 30vh;
+}
+
+.home .logo {
+  height: 130px;
+  size: 1vh;
+}
+
+.menu {
+  max-height: 150px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: red;
+}
+
+/* Proyectos */
+.proyectos {
+  height: 90vh;
+  margin-top: -20vh;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+.proyectos.proyectos1 div:nth-child(1) img {
+  grid-column: 6/8;
+  grid-row: 2/5;
+}
+
+.proyectos.proyectos2 div:nth-child(1) img {
+  grid-column: 1/3;
+  grid-row: 2/5;
+}
+
+.proyectos.proyectos3 div:nth-child(1)img {
+  grid-column: 4/5;
+  grid-row: 3/5;
+}
+
+.proyectos.proyectos4 div:nth-child(1)img {
+  grid-column: 2/3;
+  grid-row: 4/6;
+}
+
+.proyectos.proyectos5 div:nth-child(1)img {
+  grid-column: 2/3;
+  grid-row: 1/3;
+}
+
+.proyectos.proyectos6 div:nth-child(1)img {
+  grid-column: 2/3;
+  grid-row: 1/3;
+}
+
+.proyectos.proyectos7 div:nth-child(1)img {
+  grid-column: 2/3;
+  grid-row: 1/3;
+}
+
+.proyectos.proyectos8 div:nth-child(1)img {
+  grid-column: 1/3;
+  grid-row: 1/3;
+}
+
+.proyectos.proyectos9 div:nth-child(1)img {
+  grid-column: 2/3;
+  grid-row: 1/3;
+}
+
+.proyectos.proyectos10 div:nth-child(1)img {
+  grid-column: 2/3;
+  grid-row: 1/3;
+}
+
+.proyectoswork {
+  height: auto;
+  margin-top: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.proyectoswork img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 600px) {
+  .proyectoswork {
+    display: block;
+
+  }
+
+  .proyectoswork img {
+    width: 100%;
+    height: auto;
+
+  }
+
+  .proyectoswork img+img {
+    margin-top: 20px;
+  }
+
+  .menuproyectos {
+    max-height: 50px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
+}
