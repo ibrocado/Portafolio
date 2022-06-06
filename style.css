@@ -3,7 +3,7 @@
   font-family: "PP Formula";
   /* src: url("https: //res.cloudinary.com/ibrocado/raw/upload/v1651002325/fonts/PPFormula-CondensedExtralight_pecmpc.woff"), format("woff"); */
   src: url("https://res.cloudinary.com/pmichventura/raw/upload/v1651850121/CENTRO/PPFormulaCondensed-Light_pllyfl.woff2"),
-    format("woff");
+    format("woff2");
 }
 
 /* Reset */
@@ -27,6 +27,7 @@ picture {
 }
 
 body {
+  font-family: "PP Formula";
   line-height: 1.5;
   min-height: 100vh;
 }
@@ -64,7 +65,8 @@ picture {
   --black: #000000;
   --white: #ffffff;
   /* 2. Tipografía */
-  --font-sans: "PP Formula", sans-serif;
+  /* --font-sans: "PP Formula"; */
+  font-family: "PP Formula";
   --font-size-1: 1rem;
   --font-size-2: 1.1rem;
   --font-size-3: 1.25rem;
@@ -81,13 +83,18 @@ picture {
 
 /* Base */
 body {
-  font-family: var(--font-sans);
+  /* font-family: var(--font-sans); */
   background-color: var(--white);
   color: var(--black);
 }
 
 /* Home */
 .home {
+  position: relative;
+  height: 100vh;
+}
+
+.proyectos-general {
   position: relative;
   height: 100vh;
 }
@@ -101,7 +108,8 @@ body {
   height: 30vh;
 }
 
-.home .logo {
+.home .logo,
+.proyectos-general .logo {
   height: 130px;
   size: 1vh;
 }
@@ -213,3 +221,23 @@ body {
     grid-template-rows: repeat(1, 1fr);
   }
 }
+
+/* proyectos general */
+.proyectos-general {
+  display: grid;
+  width: 100vw;
+  margin-left: auto;
+  background-image: url('https://picsum.photos/1000');
+  background-position: 100% 0%;
+  background-repeat: no-repeat;
+  background-size: 50vw 100vh;
+}
+/* @keyframes pulse {
+  0% {
+    background-color: #001f3f;
+  }
+
+  100% {
+    background-color: #ff4136;
+  }
+} */
