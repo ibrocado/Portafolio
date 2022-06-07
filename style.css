@@ -133,9 +133,10 @@ body {
   grid-template-rows: repeat(5, 1fr);
 }
 
-.proyectos.proyectos1 div:nth-child(1) img {
-  grid-column: 6/8;
-  grid-row: 2/5;
+.proyectos.proyectos1 li:nth-child(1) img {
+  background-color: red;
+  /* grid-column: 6/8;
+  grid-row: 2/5; */
 }
 
 .proyectos.proyectos2 div:nth-child(1) img {
