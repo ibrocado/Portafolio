@@ -380,3 +380,41 @@ h4 {
   text-decoration: underline;
 
 }
+
+@media screen and (max-width: 600px) {
+  h4 {
+    font-size: 12px;
+  }
+
+  .proyectos-general.manual,
+  .proyectos-general.sintesis {
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    width: 100vw;
+    margin-left: auto;
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 100vw 75vh;
+
+
+  }
+
+  .proyectos-general.manual .info,
+  .proyectos-general.sintesis .info {
+    width: 95vw;
+    margin-top: 450px;
+
+  }
+
+  .contact li {
+    font-size: 17px;
+  }
+
+  .home .logo,
+  .proyectos-general .logo,
+  .about .logo,
+  .contact .logo {
+    height:90px;
+    size: 10px;
+  }
+}
