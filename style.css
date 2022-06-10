@@ -117,7 +117,8 @@ body {
 
 .home .logo,
 .proyectos-general .logo,
-.about .logo {
+.about .logo,
+.contact .logo {
   height: 130px;
   size: 1vh;
 }
