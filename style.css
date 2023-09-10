@@ -563,6 +563,7 @@ img {
   font-size: 15px;
   display: grid;
   place-content: left;
+  position: fixed;
 
 }
 
