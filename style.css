@@ -469,6 +469,12 @@ label {
 
 }
 
+.vertical {
+  width: 75%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
 @media screen and (max-height: 800px) {
   .vertical {
     width: 75%;
