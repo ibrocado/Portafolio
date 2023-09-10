@@ -469,12 +469,6 @@ label {
 
 }
 
-.vertical {
-  width: 75%;
-  margin: 0 auto;
-  overflow: hidden;
-}
-
 @media screen and (max-height: 800px) {
   .vertical {
     width: 75%;
@@ -727,6 +721,7 @@ footer div {
 
   align-items: center;
   justify-content: center;
+
   /* Cambiar a posición relativa */
   z-index: 1;
 
@@ -821,12 +816,18 @@ footer div {
 @media screen and (max-width: 900px) {
   .container2 {
     max-width: 100%;
-    padding-top: 100px;
+    margin-top: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 70%;
+    padding-top: 125px;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    /* Cambiar a posición relativa */
+    z-index: 1;
     /* Ajusta la altura a tu preferencia */
   }
 
@@ -1034,24 +1035,6 @@ footer div {
 
 
 @media screen and (max-width: 900px) {
-
-  .home-top {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    padding-block: 20px;
-    padding-inline: 30px;
-    /* Cambia el color de fondo según tu preferencia */
-    color: white;
-    /* Cambia el color del texto según tu preferencia */
-    z-index: 1000;
-    /* Asegúrate de que tenga un valor mayor que otros elementos para que quede por encima */
-    height: 1vh;
-  }
 
   .slideshow-container {
     flex: 1;
