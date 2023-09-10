@@ -1210,6 +1210,8 @@ footer div {
     font-size: 15px;
     display: grid;
     place-content: center;
+  position: fixed;
+    
 
   }
 
