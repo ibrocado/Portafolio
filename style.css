@@ -559,7 +559,7 @@ img {
   width: 33.33%;
   /* Un tercio del ancho de la pantalla */
   padding: 30px;
-  padding-top: 80px;
+  padding-top: 70px;
   font-size: 15px;
   display: grid;
   place-content: left;
