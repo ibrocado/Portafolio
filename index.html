@@ -16,30 +16,7 @@
 
 <body>
   <div class="homework">
-    <script>
-      // Verifica si el dispositivo es un dispositivo móvil
-      var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
-      // Obtén todos los elementos de galería que tienen enlaces
-      var galleryItems = document.querySelectorAll(".gallery_card_image a");
-
-      if (isMobile) {
-        // En dispositivos móviles, usa touchstart para activar el enlace con un solo toque
-        galleryItems.forEach(function (item) {
-          item.addEventListener("touchstart", function () {
-            window.location.href = this.getAttribute("href"); // Redirige al enlace al toque
-          });
-        });
-      } else {
-        // En computadoras de escritorio, el comportamiento normal de clic
-        galleryItems.forEach(function (item) {
-          item.addEventListener("click", function (event) {
-            event.preventDefault(); // Evita el comportamiento predeterminado de clic
-            window.location.href = this.getAttribute("href"); // Redirige al enlace al hacer clic
-          });
-        });
-      }
-    </script>
 
     <div class="homework-top home-link">
       <a class="awork" href="about.html">
@@ -133,6 +110,28 @@
         </a>
         <div class="image-title"><a href="contenernos.html">CONTENERNOS</a></div>
       </div>
+      
+      <script>
+        // Función para detectar si el usuario está en un dispositivo móvil
+        function isMobileDevice() {
+          return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+        }
+
+        // Obtén todos los elementos de galería que tienen enlaces
+        var galleryItems = document.querySelectorAll(".gallery_card_image a");
+
+        // Comprueba si el usuario está en un dispositivo móvil
+        if (isMobileDevice()) {
+          // En dispositivos móviles, cambia el comportamiento de los enlaces
+          galleryItems.forEach(function (item) {
+            item.addEventListener("click", function (event) {
+              event.preventDefault(); // Evita el comportamiento predeterminado de clic
+              window.location.href = this.getAttribute("href"); // Redirige al enlace al hacer clic
+            });
+          });
+        }
+      </script>
+
     </div>
 
     <footer>
