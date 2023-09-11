@@ -381,6 +381,24 @@ label {
     cursor: pointer;
   }
 
+  .home-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-block: 20px;
+    padding-inline: 30px;
+    /* Cambia el color de fondo según tu preferencia */
+    color: white;
+    /* Cambia el color del texto según tu preferencia */
+    z-index: 1000;
+    /* Asegúrate de que tenga un valor mayor que otros elementos para que quede por encima */
+    height: 1vh;
+  }
+
   .homegallerie-top {
     position: fixed;
     display: flex;
