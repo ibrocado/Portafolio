@@ -16,6 +16,30 @@
 
 <body>
   <div class="homework">
+    <script>
+      // Verifica si el dispositivo es un dispositivo móvil
+      var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+      // Obtén todos los elementos de galería que tienen enlaces
+      var galleryItems = document.querySelectorAll(".gallery_card_image a");
+
+      if (isMobile) {
+        // En dispositivos móviles, usa touchstart para activar el enlace con un solo toque
+        galleryItems.forEach(function (item) {
+          item.addEventListener("touchstart", function () {
+            window.location.href = this.getAttribute("href"); // Redirige al enlace al toque
+          });
+        });
+      } else {
+        // En computadoras de escritorio, el comportamiento normal de clic
+        galleryItems.forEach(function (item) {
+          item.addEventListener("click", function (event) {
+            event.preventDefault(); // Evita el comportamiento predeterminado de clic
+            window.location.href = this.getAttribute("href"); // Redirige al enlace al hacer clic
+          });
+        });
+      }
+    </script>
 
     <div class="homework-top home-link">
       <a class="awork" href="about.html">
@@ -117,23 +141,6 @@
       <a href="about.html">CONTACT</a>
     </footer>
 </body>
-<script>
-  var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
-  if (isMobile) {
-    var galleryItems = document.querySelectorAll(".gallery_card_image");
-
-    galleryItems.forEach(function (item) {
-      item.addEventListener("touchstart", function () {
-        this.classList.add("hover");
-      });
-
-      item.addEventListener("touchend", function () {
-        this.classList.remove("hover");
-        window.location.href = 'tu_pagina_destino.html'; // Reemplaza con tu URL
-      });
-    });
-  }
-</script>
 
 </html>
