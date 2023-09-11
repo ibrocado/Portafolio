@@ -113,22 +113,42 @@
 
       <script>
         var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        var touchStartX = 0;
+        var touchMoveX = 0;
+        var touchSensitivity = 10; // Ajusta este valor según tu preferencia
 
         if (isMobile) {
           var galleryItems = document.querySelectorAll(".gallery_card_image");
 
           galleryItems.forEach(function (item) {
-            item.addEventListener("touchstart", function () {
+            item.addEventListener("touchstart", function (e) {
+              touchStartX = e.touches[0].clientX;
+              touchMoveX = 0;
               this.classList.add("hover");
+            });
+
+            item.addEventListener("touchmove", function (e) {
+              touchMoveX = e.touches[0].clientX;
+              var touchDiff = touchMoveX - touchStartX;
+
+              // Controla el scroll solo si el desplazamiento horizontal es mayor que la sensibilidad
+              if (Math.abs(touchDiff) > touchSensitivity) {
+                e.preventDefault();
+              }
             });
 
             item.addEventListener("touchend", function () {
               this.classList.remove("hover");
-              window.location.href = this.querySelector("a").getAttribute("href");
+              // Solo redirige si no ha habido un desplazamiento significativo horizontal
+              if (Math.abs(touchMoveX - touchStartX) <= touchSensitivity) {
+                window.location.href = this.querySelector("a").getAttribute("href");
+              }
             });
           });
         }
       </script>
+
+
     </div>
 
     <footer>
