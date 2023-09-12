@@ -381,6 +381,17 @@ label {
     cursor: pointer;
   }
 
+  .about ul p {
+    /* Un tercio del ancho de la pantalla */
+    padding: 30px;
+    padding-top: 120px;
+    font-size: 15px;
+    display: grid;
+    position: relative;
+    place-content: left;
+  }
+
+  /* Estilos para el .home-top */
   .home-top {
     position: fixed;
     top: 0;
@@ -392,12 +403,26 @@ label {
     padding-block: 20px;
     padding-inline: 30px;
     /* Cambia el color de fondo según tu preferencia */
-    color: white;
     /* Cambia el color del texto según tu preferencia */
     z-index: 1000;
     /* Asegúrate de que tenga un valor mayor que otros elementos para que quede por encima */
     height: 1vh;
   }
+
+  /* Estilos para el .about ul p */
+  .about ul p {
+    width: 33.33%;
+    /* Un tercio del ancho de la pantalla */
+    padding: 30px;
+    font-size: 15px;
+    display: grid;
+    place-content: left;
+    margin: 0 auto;
+    /* Centra horizontalmente el elemento */
+    margin-top: 100px;
+    /* Ajusta la distancia desde la parte superior */
+  }
+
 
   .homegallerie-top {
     position: fixed;
